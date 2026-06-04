@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{if(localStorage.getItem("go-theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — GlobeOne</title>
+<meta name="description" content="Let's build the future of banking together. Contact GlobeOne — UK HQ with delivery in the US, Cyprus and Lebanon.">
+<link rel="icon" href="assets/img/globeone-wordmark-white.png">
+<link rel="stylesheet" href="assets/css/globe.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+.form-panel{border:1px solid var(--line-soft);border-radius:3px;padding:40px;background:linear-gradient(180deg,rgba(12,30,58,.55),rgba(8,24,48,.3))}
+.field{margin-bottom:22px}
+.field label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:9px}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(5,13,27,.6);border:1px solid var(--line-soft);border-radius:2px;
+  color:var(--ice);font-family:var(--body);font-size:.96rem;padding:13px 15px;transition:.25s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px rgba(var(--signal-rgb),.12)}
+.field textarea{resize:vertical;min-height:120px}
+.form-panel .btn{width:100%;justify-content:center;border-radius:2px}
+.form-note{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--mute);margin-top:16px;line-height:1.7}
+.form-ok{display:none;border:1px solid var(--signal-dim);background:rgba(var(--signal-rgb),.06);border-radius:3px;padding:18px;color:var(--signal);font-size:.9rem;margin-top:18px}
+.office{border-top:1px solid var(--line-soft);padding:20px 0;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.office:last-child{border-bottom:1px solid var(--line-soft)}
+.office b{font-family:var(--display);font-size:1.15rem}
+.office .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.office .coord{font-family:var(--mono);font-size:.72rem;color:var(--signal);letter-spacing:.08em}
+</style>
+</head>
+<body>
+<div class="app">
+
+<header class="nav">
+  <a class="nav__logo" href="index.html" aria-label="GlobeOne home"><span class="logomark" role="img" aria-label="GlobeOne"></span></a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="company.html">Company</a>
+    <a href="services.html">Services</a>
+    <a href="ai.html">AI</a>
+    <a href="platforms.html">Platforms</a>
+    <a href="products.html">Products</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="ecosystem.html">Ecosystem</a>
+    <a href="contact.html" class="btn" style="color:var(--abyss)" aria-current="page">Start a conversation</a>
+  </nav>
+  <div class="nav__cta">
+    <a href="contact.html" class="btn" aria-current="page">Start a conversation</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="phero__arc" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="layerbadge" data-reveal>Contact · <b>let's begin</b></div>
+    <h1 class="display" data-reveal data-d="1" style="font-size:clamp(2.2rem,5.5vw,4.4rem)">Let's build the future of banking together.</h1>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap contact-grid">
+    <div data-reveal>
+      <p class="lede" style="margin-bottom:36px">Tell us where you are on the journey — modernization, a new product, AI, or open banking — and we'll map it to the GlobeOne system.</p>
+
+      <div class="tag" style="margin-bottom:18px">Reach us</div>
+      <p style="margin-bottom:28px;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em;color:var(--fog)">info@globeone.co.uk<br>www.globeone.co.uk</p>
+
+      <div class="tag" style="margin-bottom:6px">Global footprint</div>
+      <div class="office"><div><b>United Kingdom</b></div><div style="text-align:right"><div class="role">Headquarters</div><div class="coord">51.50°N</div></div></div>
+      <div class="office"><div><b>United States</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">40.71°N</div></div></div>
+      <div class="office"><div><b>Cyprus</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">35.17°N</div></div></div>
+      <div class="office"><div><b>Lebanon</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">33.89°N</div></div></div>
+    </div>
+
+    <div class="form-panel" data-reveal data-d="2">
+      <form id="contactForm" novalidate>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="interest">Area of interest</label>
+          <select id="interest" name="interest">
+            <option>Strategic Services</option>
+            <option>AI Offering</option>
+            <option>Platforms &amp; Domains</option>
+            <option>Banking Products</option>
+            <option>Integration &amp; Governance</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Where are you on your modernization journey?"></textarea></div>
+        <button type="submit" class="btn">Send transmission <span class="arrow">→</span></button>
+        <div class="form-ok" id="formOk">Signal received. We'll be in orbit shortly — thank you for reaching out to GlobeOne.</div>
+        <p class="form-note">This demo form does not transmit data. Wire it to your CRM or email endpoint at launch — recommended field: route to info@globeone.co.uk.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand"><span class="logomark logomark--footer" role="img" aria-label="GlobeOne"></span><p>UK-based fintech consultancy and product company. Localized global solutions and services for tomorrow's banking.</p></div>
+      <div class="footer__col"><h4>Company</h4><a href="company.html">About</a><a href="ecosystem.html">Ecosystem</a><a href="contact.html">Contact</a></div>
+      <div class="footer__col"><h4>Offerings</h4><a href="services.html">Services</a><a href="ai.html">AI Offering</a><a href="platforms.html">Platforms</a><a href="products.html">Products</a></div>
+      <div class="footer__col"><h4>Solutions</h4><a href="solutions.html#infra">Integration &amp; Governance</a><a href="solutions.html#omni">Omnichannel</a><a href="solutions.html#admin">Enterprise Admin</a></div>
+    </div>
+    <div class="footer__bar"><span class="mono">© <span data-year>2026</span> GlobeOne · info@globeone.co.uk</span><div class="footer__offices"><span><b>UK</b> HQ</span><span><b>US</b></span><span><b>CY</b></span><span><b>LB</b></span></div></div>
+  </div>
+</footer>
+
+</div>
+<script src="assets/js/globe.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('name'),em=document.getElementById('email');
+  if(!n.value.trim()||!em.value.trim()){ (n.value.trim()?em:n).focus(); return; }
+  document.getElementById('formOk').style.display='block';
+  this.querySelector('button').textContent='Transmitted ✓';
+});
+</script>
+</body>
+</html>

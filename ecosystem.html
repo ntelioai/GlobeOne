@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{if(localStorage.getItem("go-theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecosystem — GlobeOne</title>
+<meta name="description" content="The GlobeOne ecosystem: eight integrated layers orbiting a single core — strategy, AI, platforms, products, infrastructure, channels and administration.">
+<link rel="icon" href="assets/img/globeone-wordmark-white.png">
+<link rel="stylesheet" href="assets/css/globe.css">
+<style>
+.eco-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+@media(max-width:920px){.eco-wrap{grid-template-columns:1fr;gap:24px}}
+.eco__stage{position:relative}
+.eco-svg{width:100%;height:auto;overflow:visible;display:block}
+.eco-ring{fill:none;stroke:var(--line-soft);stroke-width:1;transition:stroke .4s,stroke-opacity .4s}
+.eco-ring.active{stroke:var(--signal);stroke-opacity:.7;stroke-width:1.4}
+.eco-coreglow{fill:url(#coreg);filter:drop-shadow(0 0 22px rgba(var(--signal-rgb),.6))}
+.eco-coretxt{font-family:var(--display);font-weight:800;fill:var(--abyss);font-size:26px;letter-spacing:-1px}
+.eco-node{cursor:pointer}
+.eco-hit{fill:transparent}
+.eco-dot{fill:var(--mute);transition:.35s var(--ease)}
+.eco-lbl{font-family:var(--mono);font-size:13px;fill:var(--slate);letter-spacing:1px;transition:.35s;opacity:0}
+.eco-node:hover .eco-dot,.eco-node.active .eco-dot{fill:var(--signal);r:8;filter:drop-shadow(0 0 8px var(--signal))}
+.eco-node:hover .eco-lbl,.eco-node.active .eco-lbl{opacity:1;fill:var(--ice)}
+.eco-node:focus{outline:none}
+.eco-node:focus .eco-dot{fill:var(--amber)}
+.eco-rot{transform-origin:360px 360px;transform-box:view-box;animation:spin 120s linear infinite}
+@media(prefers-reduced-motion:reduce){.eco-rot{animation:none}}
+
+.eco__readout{border:1px solid var(--line-soft);border-radius:3px;padding:38px;background:linear-gradient(180deg,rgba(12,30,58,.55),rgba(8,24,48,.3));min-height:340px}
+.eco__readout [data-eco="n"]{color:var(--signal);letter-spacing:.24em}
+.eco__readout h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:1rem 0 1rem}
+.eco__readout p{font-size:1.02rem;color:var(--fog);margin-bottom:1.6rem}
+.eco__items{font-family:var(--mono);font-size:.78rem;line-height:2;color:var(--slate);letter-spacing:.04em;border-top:1px solid var(--line-soft);padding-top:1.4rem;margin-bottom:1.8rem}
+.eco-hint{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:16px}
+.layer-list{margin-top:70px}
+.layer-row{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:24px 0;border-top:1px solid var(--line-soft);transition:.3s}
+.layer-row:last-child{border-bottom:1px solid var(--line-soft)}
+.layer-row:hover{padding-left:10px}
+.layer-row .ln{font-family:var(--mono);color:var(--signal);font-size:.8rem;letter-spacing:.1em}
+.layer-row .lt{font-family:var(--display);font-weight:700;font-size:1.2rem}
+.layer-row .ld{font-size:.9rem;color:var(--slate);max-width:48ch}
+@media(max-width:680px){.layer-row{grid-template-columns:auto 1fr}.layer-row .ld{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<header class="nav">
+  <a class="nav__logo" href="index.html" aria-label="GlobeOne home"><span class="logomark" role="img" aria-label="GlobeOne"></span></a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="company.html">Company</a>
+    <a href="services.html">Services</a>
+    <a href="ai.html">AI</a>
+    <a href="platforms.html">Platforms</a>
+    <a href="products.html">Products</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="ecosystem.html" aria-current="page">Ecosystem</a>
+    <a href="contact.html" class="btn" style="color:var(--abyss)">Start a conversation</a>
+  </nav>
+  <div class="nav__cta">
+    <a href="contact.html" class="btn">Start a conversation</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="phero__arc" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="layerbadge" data-reveal>The GlobeOne ecosystem · <b>8 layers / one core</b></div>
+    <h1 class="display" data-reveal data-d="1" style="font-size:clamp(2.2rem,5.5vw,4.4rem)">One core.<br>A universe in orbit.</h1>
+    <p class="lede" data-reveal data-d="2">Every GlobeOne capability orbits a single banking core and stays in sync. Hover a node to inspect a layer — deploy one, or the whole system.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div id="eco" class="eco">
+      <div class="eco-wrap">
+        <div class="eco__stage" data-reveal></div>
+        <div class="eco__readout" data-reveal data-d="2">
+          <div class="mono" data-eco="n">Layer 01 / 08</div>
+          <h2 data-eco="t">Strategic Services</h2>
+          <p data-eco="d"></p>
+          <div class="eco__items" data-eco="items"></div>
+          <a class="btn" data-eco="link" href="services.html">Explore this layer <span class="arrow">→</span></a>
+          <div class="eco-hint">Hover or tap a node to navigate the system</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- accessible / full text fallback list -->
+    <div class="layer-list" data-reveal>
+      <div class="layer-row"><span class="ln">01</span><div><div class="lt">Strategic Services</div></div><div class="ld">Advisory, delivery &amp; open-banking integration.</div></div>
+      <div class="layer-row"><span class="ln">02</span><div><div class="lt">AI Offering</div></div><div class="ld">Experience, risk, efficiency, native products &amp; wealth.</div></div>
+      <div class="layer-row"><span class="ln">03</span><div><div class="lt">Capability Domains</div></div><div class="ld">NexusCredit · AxisTrade · PulsePay · HorizonRisk.</div></div>
+      <div class="layer-row"><span class="ln">04</span><div><div class="lt">Turnkey Platforms</div></div><div class="ld">Digital, core, universal &amp; community banking.</div></div>
+      <div class="layer-row"><span class="ln">05</span><div><div class="lt">Product Portfolio</div></div><div class="ld">Retail, corporate/SME &amp; wealth products.</div></div>
+      <div class="layer-row"><span class="ln">06</span><div><div class="lt">Integration &amp; Governance</div></div><div class="ld">Middleware, security, compliance &amp; CRM.</div></div>
+      <div class="layer-row"><span class="ln">07</span><div><div class="lt">Omnichannel Framework</div></div><div class="ld">Branch, web, mobile, agent, vendor &amp; conversational.</div></div>
+      <div class="layer-row"><span class="ln">08</span><div><div class="lt">Enterprise Administration</div></div><div class="ld">People, assets &amp; financial control.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="orbit-ring" style="width:760px;height:760px;animation:spin 90s linear infinite"></div>
+  <div class="wrap">
+    <h2 data-reveal>Map your modernization to the system.</h2>
+    <a href="contact.html" class="btn" data-reveal data-d="1">Start a conversation <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/globeone-wordmark-white.png" alt="GlobeOne">
+        <p>UK-based fintech consultancy and product company. Localized global solutions and services for tomorrow's banking.</p>
+      </div>
+      <div class="footer__col"><h4>Company</h4><a href="company.html">About</a><a href="ecosystem.html">Ecosystem</a><a href="contact.html">Contact</a></div>
+      <div class="footer__col"><h4>Offerings</h4><a href="services.html">Services</a><a href="ai.html">AI Offering</a><a href="platforms.html">Platforms</a><a href="products.html">Products</a></div>
+      <div class="footer__col"><h4>Solutions</h4><a href="solutions.html">Integration &amp; Governance</a><a href="solutions.html#omni">Omnichannel</a><a href="solutions.html#admin">Enterprise Admin</a></div>
+    </div>
+    <div class="footer__bar">
+      <span class="mono">© <span data-year>2026</span> GlobeOne · info@globeone.co.uk</span>
+      <div class="footer__offices"><span><b>UK</b> HQ</span><span><b>US</b></span><span><b>CY</b></span><span><b>LB</b></span></div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<svg width="0" height="0" style="position:absolute"><defs><radialGradient id="coreg" cx="38%" cy="32%" r="70%"><stop class="o1" offset="0%" stop-color="#BBD9FF"/><stop class="o2" offset="55%" stop-color="#4DA0FF"/><stop class="o3" offset="100%" stop-color="#1E5FB0"/></radialGradient></defs></svg>
+<script src="assets/js/globe.js"></script>
+</body>
+</html>
