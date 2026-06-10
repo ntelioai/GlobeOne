@@ -5,12 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — GlobeOne</title>
-<meta name="description" content="Let's build the future of banking together. Contact GlobeOne — UK HQ with delivery in the US, Cyprus and Lebanon.">
+<meta name="description" content="Let's build the future of banking together. Contact GlobeOne — UK HQ with delivery in the US, Cyprus and the UAE.">
 <link rel="icon" href="assets/img/globeone-wordmark-white.png">
 <link rel="stylesheet" href="assets/css/globe.css">
 <style>
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:start;max-width:680px}
+@media(max-width:900px){.contact-grid{gap:40px}}
 .form-panel{border:1px solid var(--line-soft);border-radius:3px;padding:40px;background:linear-gradient(180deg,rgba(12,30,58,.55),rgba(8,24,48,.3))}
 .field{margin-bottom:22px}
 .field label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:9px}
@@ -23,11 +23,20 @@
 .form-panel .btn{width:100%;justify-content:center;border-radius:2px}
 .form-note{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--mute);margin-top:16px;line-height:1.7}
 .form-ok{display:none;border:1px solid var(--signal-dim);background:rgba(var(--signal-rgb),.06);border-radius:3px;padding:18px;color:var(--signal);font-size:.9rem;margin-top:18px}
-.office{border-top:1px solid var(--line-soft);padding:20px 0;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.office{border-top:1px solid var(--line-soft);padding:20px 0}
 .office:last-child{border-bottom:1px solid var(--line-soft)}
+.office__head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
 .office b{font-family:var(--display);font-size:1.15rem}
 .office .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
 .office .coord{font-family:var(--mono);font-size:.72rem;color:var(--signal);letter-spacing:.08em}
+.office .addr{margin-top:8px;font-size:.88rem;line-height:1.55;color:var(--fog)}
+.channels{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:3px;overflow:hidden}
+.channel{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 20px;background:var(--panel)}
+.channel .role{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.channel a{font-family:var(--mono);font-size:.9rem;color:var(--signal);letter-spacing:.04em;text-decoration:none}
+.channel a:hover{text-decoration:underline}
+html[data-theme="light"] .channels{border-color:var(--line);background:var(--line)}
+html[data-theme="light"] .channel{background:#FFFFFF}
 </style>
 </head>
 <body>
@@ -64,16 +73,33 @@
     <div data-reveal>
       <p class="lede" style="margin-bottom:36px">Tell us where you are on the journey — modernization, a new product, AI, or open banking — and we'll map it to the GlobeOne system.</p>
 
-      <div class="tag" style="margin-bottom:18px">Reach us</div>
-      <p style="margin-bottom:28px;font-family:var(--mono);font-size:.85rem;letter-spacing:.06em;color:var(--fog)">info@globeone.co.uk<br>www.globeone.co.uk</p>
+      <div class="tag" style="margin-bottom:18px">Contact us</div>
+      <div class="channels" style="margin-bottom:36px">
+        <div class="channel"><div class="role">Information</div><a href="mailto:info@globeone.co.uk">info@globeone.co.uk</a></div>
+        <div class="channel"><div class="role">Sales</div><a href="mailto:sales@globeone.co.uk">sales@globeone.co.uk</a></div>
+        <div class="channel"><div class="role">Recruitment</div><a href="mailto:joinus@globeone.co.uk">joinus@globeone.co.uk</a></div>
+      </div>
 
       <div class="tag" style="margin-bottom:6px">Global footprint</div>
-      <div class="office"><div><b>United Kingdom</b></div><div style="text-align:right"><div class="role">Headquarters</div><div class="coord">51.50°N</div></div></div>
-      <div class="office"><div><b>United States</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">40.71°N</div></div></div>
-      <div class="office"><div><b>Cyprus</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">35.17°N</div></div></div>
-      <div class="office"><div><b>Lebanon</b></div><div style="text-align:right"><div class="role">Delivery</div><div class="coord">33.89°N</div></div></div>
+      <div class="office">
+        <div class="office__head"><b>United Kingdom</b><div style="text-align:right"><div class="role">Headquarters</div><div class="coord">51.50°N</div></div></div>
+        <div class="addr">West End, W1<br>169 Great Portland Street, London</div>
+      </div>
+      <div class="office">
+        <div class="office__head"><b>United States</b><div style="text-align:right"><div class="role">Delivery</div><div class="coord">40.71°N</div></div></div>
+        <div class="addr">5 Pennsylvania Plaza, 19th Floor<br>New York, NY 10001, United States</div>
+      </div>
+      <div class="office">
+        <div class="office__head"><b>Cyprus</b><div style="text-align:right"><div class="role">Delivery</div><div class="coord">35.17°N</div></div></div>
+        <div class="addr">Hadjikyriakeion Bld, Prodromou 1<br>121, 1st Floor, Avenue 2064, Cyprus</div>
+      </div>
+      <div class="office">
+        <div class="office__head"><b>United Arab Emirates</b><div style="text-align:right"><div class="role">Delivery</div><div class="coord">24.45°N</div></div></div>
+        <div class="addr">Cubes Park ICT, B1 Building<br>Al Marhabani Street, 1st Floor<br>Abu Dhabi, United Arab Emirates</div>
+      </div>
     </div>
 
+    <!-- Contact form hidden for now — re-enable when wired to CRM/email endpoint
     <div class="form-panel" data-reveal data-d="2">
       <form id="contactForm" novalidate>
         <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
@@ -95,6 +121,7 @@
         <p class="form-note">This demo form does not transmit data. Wire it to your CRM or email endpoint at launch — recommended field: route to info@globeone.co.uk.</p>
       </form>
     </div>
+    -->
   </div>
 </section>
 
@@ -106,20 +133,23 @@
       <div class="footer__col"><h4>Offerings</h4><a href="services.html">Services</a><a href="ai.html">AI Offering</a><a href="platforms.html">Platforms</a><a href="products.html">Products</a></div>
       <div class="footer__col"><h4>Solutions</h4><a href="solutions.html#infra">Integration &amp; Governance</a><a href="solutions.html#omni">Omnichannel</a><a href="solutions.html#admin">Enterprise Admin</a></div>
     </div>
-    <div class="footer__bar"><span class="mono">© <span data-year>2026</span> GlobeOne · info@globeone.co.uk</span><div class="footer__offices"><span><b>UK</b> HQ</span><span><b>US</b></span><span><b>CY</b></span><span><b>LB</b></span></div></div>
+    <div class="footer__bar"><span class="mono">© <span data-year>2026</span> GlobeOne · info@globeone.co.uk</span><div class="footer__offices"><span><b>UK</b> HQ</span><span><b>US</b></span><span><b>CY</b></span><span><b>AE</b></span></div></div>
   </div>
 </footer>
 
 </div>
 <script src="assets/js/globe.js"></script>
 <script>
-document.getElementById('contactForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  var n=document.getElementById('name'),em=document.getElementById('email');
-  if(!n.value.trim()||!em.value.trim()){ (n.value.trim()?em:n).focus(); return; }
-  document.getElementById('formOk').style.display='block';
-  this.querySelector('button').textContent='Transmitted ✓';
-});
+var contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('name'),em=document.getElementById('email');
+    if(!n.value.trim()||!em.value.trim()){ (n.value.trim()?em:n).focus(); return; }
+    document.getElementById('formOk').style.display='block';
+    this.querySelector('button').textContent='Transmitted ✓';
+  });
+}
 </script>
 </body>
 </html>
