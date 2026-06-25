@@ -470,3 +470,7 @@ html[data-theme="light"] .footer{background:#E7EEF7;border-top-color:var(--line)
 h1,h2,h3,h4,.display,.card h3,.suite__head h3,.minicard .nm,
 .layer-row .lt,.stats .stat .num,.hero__core span,.office b,
 .eco-coretxt{font-weight:var(--display-weight)}
+
+/* product detail links — accent on hover */
+a[href^="product/"],a[href*="/product/"]{transition:color .2s var(--ease)}
+a[href^="product/"]:hover,a[href*="/product/"]:hover{color:var(--signal)}
